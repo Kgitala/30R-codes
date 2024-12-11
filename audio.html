@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Player Example</title>
+</head>
+<body>
+    <div class="logo-container">
+        
+        <img src="https://t4.ftcdn.net/jpg/05/78/50/75/360_F_578507584_y0BUZ9yYbIZy9lNVI4sH1AbuLJaBPJru.jpg" alt="Music Logo" class="logo" id="music-logo" width="40" height="40">
+    </div>
+
+
+    <!-- Movie Image for First Song -->
+    <div id="movie-image-container" style="display: none;">
+        <img id="movie-image-1" src="" alt="Movie Image 1" style="width: 560px; height: 315px;"/>
+        <br/>
+        <!-- First Song Player  -->
+        <audio id="audio-player-1" controls>
+            <source id="audio-source-1" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br/>
+        <!-- Download Button for First Song -->
+        <a id="download-btn-1" href="#" download="song1.mp3">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAADACAMAAAB/Pny7AAAAkFBMVEX/////gIDVa2v/fX3/cXHTX1/kp6f/0tLRWFj/5ubvzc3UaGj/e3v/jIz/d3f/goLYeXn24+P/+fnodXX/7+//hob/3t7/mZn/vr7/srL/zc3/trb/bW3/yMjTY2P/2Nj/rKzpt7f/oKDPUFDz1tbmr6/Yc3PhmJjeYGDhkpLtxMTciYn/Z2fdg4PkoKDkaWk/kiMTAAAJHklEQVR4nO2daXebOBSGbQtiE7E4FAxewEtiZ+p0Mv//3w3EG4hFutIVuOfwfuqpG4enku4qpNFo0KBBgwYNGjRo0KC/VP6P+n4KJfmBtdhOV0kSx+tMcZwkq9V2YQV/G5a1TeLlIXI82y3J9pzosIyTrdX3EwrKWq13kUOyJyeEjBllf5XxESfarVdPD7RdR05o21UKlsm2Qydab/t+3mYtlk5IuCAFIBI6y0XfT10nPw5JzbziARESxs9mERbRxgWC3IHcTfREw+OvvI0tR/Ijz954q+cYniAJN8RTYMlxyCZMgr5JMhTHVUW54LhOzzhBErkqE6wk4kZ94kwPBA0ll00O055QrF3oYqLkcsNdL4FB4tiSxrhNxHaSzlGCwxh1hj1kjw8dr5xpqGFU7jhhlyvHX8u6ezERd92ZD7UiQydKLiPqyA4sQhfBS7bLc8NO4rWVbWtnyeM1e6UdxY8NrcvlIWLozg2ypd8Nyli/GQh2mpxLveydRo8T7DqaYjcRfTQdj0subWPjd8+S02hZN/5Su6usk7HUQOOvNx24l6q8jQablvTDktOg5wTbvlhyGuTCp6U3TG4XcVGjzsDpwZA9ZDuYBvrQK0tGc8BjiXucYxeRGItlq5IjF9pNCsNLQiQjEKhMMvuwvEvte3CWjVLUbxT+R7eGgnl31xgsU09lxRiFQsvrPwowxEMo2QQHpXSsBDP75cnjuAgTLVFLLcswEyUa5bDGUqz2MTCTX2NpGhIqBgL+UjHnZ2FUxsZVzAYs1fpFBSajkf4yxRgtwodRoHEjFZaFcnJZA6NAY6iUOdVr/XUwk1+h5LeRUJ5FfWDqYeTHRmFoELKYehhpGtuRHhiELKYBRp5GdmgOCGlME4ysvyGSaZqq82+HkaSRDQPWGPllM4zkTCNSqYAfaYaRoyGRTEyD01Bug5GiIVKt6CVKRaYVRorGXsJZLJRZxoGRiQWIRCN6pZQti8JIjA3x4J1bpOYlD0aCBl7asCKcIiYXBk5jg+fZFmeWCcCAaYgHLQgq1jEgMGAaaGUDrRcrAgOlgXZtLQepVi4EA6QhDmzRLLA2YojBAGlcWB6wwuosC8LAaAyQp1Eul4FhQDSwAlqAE8tAYCA0JIJYgAD6usW46d8LwVAgDSEQGAu4ZIh3aCh+CMDQ+e8ThdEYEHM2hcEQEo+29cacD0PnH6MjcGwMSE4Tw9a/m7dP62m4MDnLaHRMQTQuoF8L3L9kXL66to/Lg7mwjEb7ax1a7DdC9jr5oJDZuP03LWqCUw4MnXxcPzxCquo2oBDgQ9J/4zHki+qmFA5M+nH/dA+gISEABrBkjOL0tTYsTTvM7K3ww3tTnMYFwIgbM7scjlvsRuFWmBLLaHQWtwKGOEywEYZh7QpL0wbDsNyGRoRmI+41LfHNZZWNelb5rZpmGErLLP7L++0jLo23EfeakL5MhaZs0xph6Omj9GP+8f3xIZcG0KcBNZkymvJPl/xNE8zNv9Sy8P0NAGYLima8DbNpv0jTAEPnr20s3LExxGsawNDMM9aNNPUw9MSymKzVbqcBBGdAmMxAszT3lKAW5uH3bywpy8KhAcDAptk4D5tZK3CLBWphTJaF0ipMKw1gmsG7zFWaq7+pg5kJsbTS6LJmVxp2pl1pamAqLGk9SxsNAAbgNAvfz8QCF5oqDMNy9/sQGojTBIQzxV/Ajk0WC3gsDE1b/YsoDSCcAQSaRZo/zNjkxXcGptXvA2gAgSYkBWijmYakDMP6lxGPpSkWgKQAkr3ZSiwwDTclGNZX7rks9TSg5Ey60+SyNG4RxuT6fcGZBkqb5RsaNkOzKni31zPD0miTeTSgl7eApaaCKt4zqP3jqMVXCtBASk3w4KxII/biK4ClSgMqAkLLsyUadqY1sAjOsVoaUHkWXjgv/SqBSdDm97k0sMK5Wksjs9BcFgGb3EwDa2koNpsq3lOdpUQD3K2t2Abk0MiwFGlgbUDlBm0lFijI37d20ARogA1a9dY5GwsUWIBrv0IDbZ2rb2po8jcg/1JPA34VXX27ST2NEsuVBvwiDcJGoDoaf6/E8kMD3wiEsUWrGgv4e5Dfr6eBb9HC2TxnMBNib6qyZDQ2fDMwzrbGsr+R8y8VGvi2RpwNpyXvicOSfr01P3WTcLYCe3/uMw2HZZJ+w1mwTv3yjOTHCkj7fUb0dOY9eY1wts+Pr7FAZsdQWLJZJvVKIMqLDeOLv1H2L3fRFxkWnFdOfmi8+DjBYjlJLP9cGC8DXWjCEIllQn/LsaC8pnWV52HBfPCfu16Ix4Ag0dC5LAvGq40PmhADhu2HQCRoAoiIxh5tldDATORZBIcmdAQ1b5GQuVMZGLEXtbPEzxLUW7NeBJLp9EuFRegVelDht1EiHYFUaWCECmg4MAIjY74oHg4mEAZ0BSPt/B/iVza6gpnJhMtl8Y9q6Qgm/Y1wJhD3EJ1uYOjklf8lfPFKGzgwvDqnKRf6s+IdPEWi9Yu6/m13mukX0nltvCPBiPufqax2lsoGAnlxD2vzfrXPEWXRPRaLwDF6mmnSTzwWgQMOtdKkc9QTaLlHT3oaaSi7m1tVW96uLY0072iL/yb+ca26aN7VwxhWAgfp6qF5V42Va2n4RxzroJl96zmwmd/nxKcxPzUdpS3QtcWmSXWxCB3YjkujkaXzsUm/tV7ewr/fBNHfmC+aL6LhXz+BRUNne/33tnAvBsGhSU18X1kj/pUtCDTmSa1GJiz+ZTrKNDOZlrKcBMyAEg2d6QhhGjUNOTZagYYi5shi4l4NJk1DKUaBDCjepW1yNDSdI6b74uJcpydloc3Td2crn1H7RYdwmpR+drxaimq/ghJIQ82vc983arZcDgqhoeZp39cMK+I0X9sqTjOb7J/j3nB/5TReqCtEk75Pzk9BclHzVcd8mvT93ye66vhHjZdQt9FQStPTsf9rgWuUXw8+rl4P3kCTcaSn+XdHwbGMai9ur9JcQL5eevQqYrJW613kENe1b7OuYNNyitSk86/Pl3P/hlhM1jaJl4fI8W63z1y7UekkxzieP/4WkJv8wFpsV6skieP1en08Hvfn8/n14+053Im0/Iv6foxBgwYNGjRo0KBBgyT1P0ib6eDNwbJSAAAAAElFTkSuQmCC"
+                         alt="download" width="50">
+        </a>
+    </div>
+
+    <!-- Movie Image for Second Song-->
+    <div id="movie-image-container-2" style="display: none;">
+        <img id="movie-image-2" src="" alt="Movie Image 2" style="width: 560px; height: 315px;"/>
+        <br/>
+        <!-- Second Song Player  -->
+        <audio id="audio-player-2" controls>
+            <source id="audio-source-2" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <br/>
+        <!-- Download Button for Second Song -->
+        <a id="download-btn-2" href="#" download="song2.mp3">
+            <img src="data:image/png;base64,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"
+                         alt="download" width="50">
+        </a>
+    </div>
+    <script>        // Music Logo Click Event (Show Movie Images and Audio Players, but don't play music automatically)
+        document.getElementById('music-logo').addEventListener('click', function() {
+            // Show the first movie image
+            var movieImage1 = document.getElementById('movie-image-1');
+            var movieImageContainer1 = document.getElementById('movie-image-container');
+            movieImageContainer1.style.display = 'block'; // Show the movie image
+            movieImage1.src = 'https://static.theprint.in/wp-content/uploads/2024/04/ANI-20240405071322.jpg'; // Movie image link
+
+            // Show the first audio player, but don't play it yet
+            var audioPlayer1 = document.getElementById('audio-player-1');
+            var audioSource1 = document.getElementById('audio-source-1');
+            audioSource1.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'; // Replace with your first song URL
+            audioPlayer1.load(); // Reload audio source
+
+            // Show the second movie image and audio controls, but don't play yet
+            var movieImage2 = document.getElementById('movie-image-2');
+            var movieImageContainer2 = document.getElementById('movie-image-container-2');
+            movieImageContainer2.style.display = 'block'; // Show second movie image
+            movieImage2.src = 'https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/medium/pushpa-the-rule--part-2-et00356724-1729771762.jpg'; // Change this to a second movie image
+
+            // Set the second audio player, but don't play yet
+            var audioPlayer2 = document.getElementById('audio-player-2');
+            var audioSource2 = document.getElementById('audio-source-2');
+            audioSource2.src = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'; // Replace with your second song URL
+            audioPlayer2.load(); // Reload audio source
+        });
+
+        // Play/Stop functionality for First Song (Only play when clicked)
+        document.getElementById('audio-player-1').addEventListener('play', function() {
+            var audioPlayer1 = document.getElementById('audio-player-1');
+            // Stop the second song if it's playing
+            var audioPlayer2 = document.getElementById('audio-player-2');
+            if (!audioPlayer1.paused) {
+                audioPlayer2.pause(); // Pause the second song if first one is played
+            }
+
+        });
+
+        // Play/Stop functionality for Second Song (Only play when clicked)
+        document.getElementById('audio-player-2').addEventListener('play', function() {
+            var audioPlayer2 = document.getElementById('audio-player-2');
+            // Stop the first song if it's playing
+            var audioPlayer1 = document.getElementById('audio-player-1');
+            if (!audioPlayer2.paused) {
+                audioPlayer1.pause(); // Pause the first song if second one is played
+            }
+        });
+    </script>
+        
+
+
+    
+            
+</body>
+</html>
