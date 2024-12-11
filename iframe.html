@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+</head>
+<body>
+    <center>
+    <!-- Iframe for YouTube video or Google Maps location -->
+    <iframe id="content-frame" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen width="560" height="315"></iframe>
+
+    <!-- Container for the logos -->
+ 
+     <div class="logo-container">
+        <!-- YouTube Logo -->
+      <img src="https://img.freepik.com/premium-vector/youtube-logo-with-red-square_876006-17.jpg?semt=ais_hybrid" alt="YouTube Logo" class="logo" id="youtube-logo" width="40" height="40">
+        
+        <!-- Google Maps Logo -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Google_Maps_icon_%282015-2020%29.svg/2048px-Google_Maps_icon_%282015-2020%29.svg.png" alt="Google Maps Logo" class="logo" id="google-maps-logo" width="40" height="40">
+     </div>
+    </center>
+    <script>
+        // YouTube Logo Click Event
+        document.getElementById('youtube-logo').addEventListener('click', function() {
+            var videoId = 'kUMe1FH4CHE'; // Replace with your desired YouTube video ID
+            var iframe = document.getElementById('content-frame');
+            
+            // Set the iframe to load the YouTube video
+            iframe.src = 'https://www.youtube.com/embed/' + videoId + '?autoplay=1';
+        });
+
+        // Google Maps Logo Click Event (with fixed Google Maps link)
+        document.getElementById('google-maps-logo').addEventListener('click', function() {
+            // Fixed Google Maps link for the Eiffel Tower in Paris
+            var mapsLink = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15222.778410748906!2d78.3923713768812!3d17.474325326859038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb91b5be1f29c3%3A0xf5af71d23e422328!2sKukatpally%20Housing%20Board%20Colony%2C%20Kukatpally%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1733918798999!5m2!1sen!2sin'; // Coordinates for the Eiffel Tower
+    
+            // Set the iframe to display the Google Maps location
+            var iframe = document.getElementById('content-frame');
+            iframe.src = mapsLink;
+        });
+      
+    </script>
+
+</body>
+</html>
