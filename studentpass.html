@@ -6,15 +6,15 @@
     <title>studentpass</title>
 </head>
 <body>
-   <center><img src="./tsrtc.png" width="150"></center>
+   <center><img src="./tsrtc.png" width="150"></center>r
     <center><h2>TELANGANA STATE ROAD TRANSPORT CORPORATION</h2>
     <h2>GENERAL BUSS PASS APPLICATION</h2></center>
     <fieldset>
         <legend>Applicant details</legend>
-    <form method="get">
-        <label>Name<span  style="color:red"> *</span></label>
+    <form method="get" autocomplete="off">
+        <label>Name<span  style="color:red" > *</span></label>
             
-            <input type="text" name="username" id="name" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <lable for="username">Father name:<span style="color:red">  *</span></lable>
+            <input type="text" name="username" required  pattern=".[a-z]+{9}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      <lable for="username">Father name:<span style="color:red">  *</span></lable>
             <input type="text" name="username" id="name"> <br> 
             <br>
             <lable for="Date of birth">Date of birth:<span style="color:red">  *</span></lable>
@@ -30,18 +30,18 @@
             <br>
             <lable for="no">WhatsApp no:<span style="color:red">  *</span></lable>
             <input type="no" name="no" id="no">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<lable for="mail">Email id:<span style="color:red">  *</span></lable>
-            <input type="text" name="mail" id="name"><br>
+            <input type="text" pattern="[a-z0-9A-Z_.]+@gmail.com"  required name="email" ><br>
             <br>
             <lable for="file">Photo:<span style="color:red">  *</span></lable>
-            <input type="file" name="choose a file" id="name">
+            <input type="file" name="file" accept=".pdf,.docx" multiple>
         </form>
         </table>
         </fieldset>
         <fieldset>
             <legend>Residential Address Details</legend>
-        <form method="get">
+        <form method="get" autocomplete="off">
             Address:<span style="color:red">  *</span>
-             <textarea name="blog"></textarea>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; District:<span style="color:red">  *</span>
+             <textarea name="Address" id=" " rows="10" col="10"></textarea>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; District:<span style="color:red">  *</span>
             <select name="place">
                 <option value="HYDERABAD">HYDERABAD</option>
                        </select>
@@ -51,8 +51,9 @@
             <select name="place">
      <option value="HYDERABAD">HYDERABAD</option>
             </select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Village:<span style="color:red">  *</span>
-            <select name="place">
-                <option value="HYDERABAD">HYDERABAD</option>
+            <select name="place" id="">
+                <option value="HYDERABAD" disabled selected>HYDERABAD</option>
+                <option value="chennai">Chennai</option>
                        </select><br>
             <br>
             <lable for="Adress">Pincode:<span style="color:red">  *</span></lable>
@@ -61,7 +62,7 @@
     </fieldset>
     <fieldset>
         <legend>Pass Type Details</legend>
-        <form method="get">
+        <form method="get" autocomplete="off">
             City:<span style="color:red">  *</span>
             <select name="place">
                 <option value="HYDERABAD">HYDERABAD</option>
@@ -69,7 +70,7 @@
             <br>
             Pass type:<span style="color:red">  *</span>
             <select>
-                <option value="-----Select-----">-----Select-----</option>
+                <option value=" " disabled selected>-----Select-----</option>
             </select>
         </form>
     </fieldset>
@@ -79,16 +80,18 @@
             Payment Mode:<span style="color:red">  *</span>
             <select>
                 <option value="Select Payment Mode">Select Payment Mode</option>
+                <option value="online mode">online mode</option>
                 </select><br>
             <br>
             Pass Delivery Mode:<span style="color:red">  *</span>
             <select>
-                <option value="Select Pass Delivery Mode">Select Pass Delivery Mode</option><br>
+                <option value="Select Pass Delivery Mode">Select Pass Delivery Mode</option>
+                <option value="post">post</option><br>
             </select><br>
             <br>
             Center at which you want to collect Pass:<span style="color:red">  *</span>
             <select>
-                <option value="-----Select-----">-----Select-----</option>
+                <option value=" " disabled selected>-----Select-----</option>
             </select><br>
             <br>
  
@@ -102,11 +105,13 @@
     
     
     <center>
+    
         <img src="./CAPTCHA.png"width="150" ><br>
         <br>
         <input type="text" name="OTP" required pattern=".{6}"><br>
         <br>
         <input type="submit"></center>
+        
     </form>
 </body>
 </html>
