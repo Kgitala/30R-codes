@@ -1,0 +1,116 @@
+
+.main{
+    position: fixed;
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    z-index: 1;
+}
+b{
+    color: black;
+}
+.head{
+    display: inline-block;
+    font-size: 30px;
+}
+.projects{
+    display: inline-block;
+    position: absolute;
+    right: 60px;
+    
+}
+.project{
+    padding: 20px;
+}
+.imageblock{
+    position: relative;
+    
+    
+    
+}
+.matter{
+    position: absolute;
+    top: 500px;
+    font-size: 70px;
+    left: 500px;
+  
+    
+}
+.hea{
+    padding: 10px;
+}
+.img1{
+    
+     color: white;
+    font-size: 70px;
+    background-color: black;
+}
+.archi{
+    color: white;
+}
+h1{
+    position: relative;
+    top: 100px;
+    left: 20px;
+}
+.item1{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 13px;
+
+
+}
+.img4{
+    position: relative;
+    top: 150px;
+    left: 30px;
+    width: 290px;
+
+}
+.small{
+    position: absolute;
+    background-color: black;
+    top: 150px;
+    left: 30px;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+.item2{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+.item3{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+.item4{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+.item5{
+    display: inline-block;
+    position: relative;
+    
+}
+.item6{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+.item7{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+.item8{
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
