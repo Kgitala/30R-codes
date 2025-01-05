@@ -1,0 +1,37 @@
+.container .box p {
+    padding: 20px;
+    background-color: yellowgreen;
+}
+.section .content p{
+    margin: 15px;
+    background-color: brown;
+}
+.card>.card-body p{
+    border: 2px solid red;
+}
+.navbar ul li{
+    background-color: lightblue;
+}
+.header h1{
+    margin-top: 20px;
+    background-color: aqua;
+}
+.footer>span{
+    padding: 10px;
+    background-color: aquamarine;
+
+}
+.main-content .content p{
+    border: 1px solid black;
+}
+.nav ul li{
+    margin-right: 15px;
+    background-color: blueviolet;
+}
+.gallery .photo{
+    background-color: lightgray;
+}
+.container .footer span{
+    border-radius: 5px;
+    background-color: blue;
+} 
