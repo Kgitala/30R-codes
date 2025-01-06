@@ -1,0 +1,41 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bgimg {
+    background-image: url('./avatar.jpg'); /* Background image */
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+    /*position: relative; /* Positioning logo and footer inside the image */
+  }
+  
+  .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: black;
+    z-index: 1;
+  }
+  
+  .middle-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  
+  .footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 16px;
+    color:black;
+    z-index: 1;
+  }
+  
