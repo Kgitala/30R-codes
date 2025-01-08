@@ -1,0 +1,37 @@
+.container-1{
+  padding: 10px;
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: space-around;
+  text-align: center;
+  border-radius: 20px;
+}
+/*.item-g{
+  /*background-color:gray;
+  border: 1px solid gray;
+  border-radius: 10px;
+}*/
+.container-2{
+  display: flex;
+  justify-content: center;
+  
+  
+}
+.item-01{
+  background-color: lime;
+  padding: 10px;
+  border-radius: 10px;
+}
+.item-01 .bi{
+  margin: 10px;
+}
+.item-02{
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.p{
+  display: inline-block;
+}
