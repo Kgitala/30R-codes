@@ -1,0 +1,56 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(35, 9, 59);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    padding: 20px;
+    background-color: rgb(53, 17, 88);
+    display: flex;
+    width: 40%;
+    height: 400px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px rgb(26, 158, 202),3px 3px rgb(26, 158, 202) inset;
+    
+}
+.title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+}
+.details{
+    display: flex;
+    flex-flow: column;
+    gap: 10px;
+    width: 80%;
+    padding: 10px;
+
+}
+.button{
+    height: 50px;
+    padding: 10px;
+}
+.button2{
+    height: 50px;
+    padding: 10px;
+    background-color: rgb(32, 165, 209);
+    color: white;
+    
+}
+a{
+    color: rgb(32, 165, 209);
+    text-decoration: none;
+}
