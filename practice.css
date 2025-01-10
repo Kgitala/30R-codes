@@ -1,0 +1,30 @@
+body{
+    margin:0px;	
+}
+header{
+    background-color:black;
+    display:flex;
+    position:fixed;
+    top:0px;
+    width:100vw;
+}
+nav>a{
+    text-decoration:none;
+    color:white;
+    }
+header>nav{
+    padding:10px;
+    text-align:center;
+    flex-grow:1;
+    }
+nav:hover{
+    background-color:gray;
+    
+    }
+    
+nav:hover>a{
+    color:black;
+}
+nav a:active{
+    color: blue;
+}
