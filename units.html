@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-px{
+            width:200px;
+            height: 100px;
+            border: 2px solid;
+        
+        }
+        .parent-percent{
+            width: 50vw;
+            height: 50vh;
+            border: 2px solid;
+            background-color: black;
+
+        }
+        .child-percent{
+            width: 50%;
+            height: 50%;
+            background-color: brown;
+        }
+        .rem-paragraph{
+            font-size: 2rem;
+        }
+        .parent-em{
+            font-size: 16px;
+        }
+        .child-em{
+            font-size: 1.5em;
+            background-color: aqua;
+        }
+        .box-vw{
+            width: 50vw;
+            background-color: blue;
+        }
+        .box-vh{
+            height: 25vh;
+            background-color: blueviolet;
+        }
+        .square-vmin{
+            width: 20vmin;
+            height: 20vmin;
+            background-color: bisque;
+        }
+        .square-vmax{
+            width: 20vmax;
+            height: 20vmax;
+            background-color: brown;
+        }
+        .parent-relative{
+            position: relative;
+            width: 50%;
+            height: 400px;
+            background-color: black;
+        }
+        .child-absolute{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+             width: 100px; 
+             height: 100px; 
+            background-color: chocolate;
+        }
+        .parent-font{
+            font-size: 20px;
+            background-color: aquamarine;
+        }
+        .child-font{
+            font-size: inherit;
+            background-color:violet;
+        }
+    </style>
+</head>
+<body>
+    <h3>Task 1</h3>
+    <div class="box-px">Box with px units</div>
+    <h3>Task 2</h3>
+    <div class="parent-percent">
+    <div class="child-percent">Box with % units</div>
+    </div>
+    <h3>Task 3</h3>
+    <p class="rem-paragraph">This paragraph users rem units.</p>
+    <h3>Task 4</h3>
+    <div class="parent-em">
+        <p class="child-em">This paragraph users rem units.</p>
+    </div>
+    <h3>Task 5</h3>
+    <div class="box-vw">Box with vw units</div>
+    <h3>Task 6</h3>
+    <div class="box-vh">Box with vw units</div>
+    <h3>Task 7</h3>
+    <div class="square-vmin">Square with vmin units</div>
+    <h3>Task 8</h3>
+    <div class="square-vmax">Square with vmax units</div>
+    <h3>Task 9</h3>
+    <div class="parent-relative">
+        <div class="child-absolute">Child Box</div>
+    </div>
+
+    <h3>Task 10</h3>
+    <div class="parent-font">Parent Text
+    <div class="child-font">Child Text(Inherits Font Size)</div>
+    </div>
+
+    
+</body>
+</html>
