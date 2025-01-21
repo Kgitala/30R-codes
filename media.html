@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.orange,
+.yellow,
+.green,
+.white {
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: orange;
+    border: 4px solid;
+}
+.yellow{
+    background-color:yellow;
+}
+.green{
+    background-color: green;
+}
+.white{
+    background-color: white;
+}
+.flex-container{
+    display: flex;
+    padding: 12px;
+    border: 12px;
+    justify-content: space-between;
+    background-color: brown;
+    border: 2px solid;
+}
+.sub-container{
+    display: flex;
+}
+.sub-container>div:first-child{
+    margin-right: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="orange">Orange</div>
+        <div class="sub-container">
+            <div class="yellow">Yellow</div>
+            <div class="green">Green</div>
+        </div>
+    </div>
+
+    
