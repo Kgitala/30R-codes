@@ -20,6 +20,7 @@ a="pujitha"
 
 #length of str
 print(len(a))
+p
 
 #type of str
 print(type(a))
@@ -46,5 +47,32 @@ print(a1-a2)
 print(a1*a2)
 print(a1/a2)
 print(a1**a2)
-print(a1//a2)
+#print(a1//a2)
+atm_pin=123
+print(atm_pin ==122)
+print(atm_pin ==123)
+print(2.5>2)
+print(2.5<2)
+print(2.5>=2)
+user_password='1234'
+user_name='1233'
+if True:
+print("login successfully")
+if False:
+print("wrong password")
+#list
+list_new=[1,2,3,4,"string",True,[2,3,4[3,4,5]]]
+print(type(list_new))
+print(list_new)
+print(list_new[2])
+print(len(list_new))
+print(list_new[0:3])
+#tuple
+tuple=(1,2,3[2,3,4],"string")
+print(type(tuple))
+print(len(tuple))
+print(tuple[5])
+print(len[3][2])
+
+
 
