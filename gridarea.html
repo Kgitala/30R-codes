@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .grid-container1{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 15px;
+            padding: 10px;
+            height: 100vh;
+            grid-template-areas:
+            'a b b c'
+            "a d e f"
+            "a g h f";
+        }
+        .item-1{
+            background-color: green;
+            grid-area: a;
+        }
+        .item-2{
+            background-color: red;
+            grid-area: b;
+        }
+        .item-3{
+            background-color:gold;
+            grid-area: c;
+        }
+        .item-4{
+            background-color: red;
+            grid-area: d;
+        }
+        .item-5{
+            background-color:green;
+            grid-area: e;
+        }
+        .item-6{
+            background-color: red;
+            grid-area: f;
+        }
+        .item-7{
+            background-color: gold;
+            grid-area: g;
+        }
+        .item-8{
+            background-color:green;
+            grid-area: h;
+        }
+        @media screen and (max-width : 550px) {
+            .grid-container1{
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                'a'
+                'b'
+                'c'
+                'd'
+                'e'
+                'f'
+                'g'
+                'h';
+            }
+        }
+        @media screen and (min-width : 550px) and (max-width : 900px) {
+            .grid-container1{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-areas: 
+                'a b'
+                'c d'
+                'e f'
+                'g h';
+            }
+        }
+        .grid-container2{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: 90px 1fr 1fr 90px;
+            gap: 15px;
+            padding: 10px;
+            height: 100vh;
+            grid-template-areas: 
+            'h h h'
+            's c1 c1'
+            's c2 c3'
+            'f f f';
+            font-size: 2rem;
+        }
+        .box{
+            border: 5px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-1{
+            background-image: linear-gradient(to top left,skyblue,green 80%);
+            grid-area: h;
+        }
+        .box-2{
+            background-image: linear-gradient(to top left,skyblue,rgb(2, 234, 2));
+            grid-area: s;
+        }
+        .box-3{
+            background-image: linear-gradient(to top left,skyblue,green);
+            grid-area: c1;
+        }
+        .box-4{
+            background-image: linear-gradient(to bottom left,skyblue,green);
+            grid-area: c2;
+        }
+        .box-5{
+            background-image: linear-gradient(to top right,skyblue,green);
+            grid-area: c3;
+        }
+        .box-6{
+            background-image: linear-gradient(to top right,skyblue,green 60%);
+            grid-area: f;
+        }
+        @media screen and (max-width : 550px) {
+            .grid-container2{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(6,1fr);
+                grid-template-areas: 
+                'h'
+                's'
+                'c1'
+                'c2'
+                'c3'
+                'f';
+            }
+        }
+        @media screen and (min-width : 550px) and (max-width : 900px) {
+            .grid-container2{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(3,1fr);
+                grid-template-areas: 
+                'h s'
+                'c1 c2'
+                'c3 f';
+            }
+        }
+        .grid-container3{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            gap: 10px;
+            background-color: #203040;
+            padding: 20px;
+            grid-template-areas: 
+            'f5 o1 o1 o1 t3 t3'
+            's6 o1 o1 o1 f4 f4'
+            's7 n9 t2 t2 e11 t12'
+            'e8 t10 t2 t2 t13 f14';
+            height: 100vh;
+        }
+        .sub{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.6rem;
+        }
+        .sub-1{
+            background-image: linear-gradient(to top left,lightgreen,wheat,lightsteelblue);
+            grid-area: o1;
+        }
+        .sub-2{
+            background-image: linear-gradient(to bottom left,pink,wheat,lightblue);
+            grid-area: t2;
+        }
+        .sub-3{
+            background-image: linear-gradient(to top left,lightgray,lightblue,lightsalmon);
+            grid-area: t3;
+        }
+        .sub-4{
+            background-image: linear-gradient(to bottom right,lightblue,lightsteelblue,lightgreen);
+            grid-area: f4;
+        }
+        .sub-5{
+            background-image: linear-gradient(to bottom right,lightcoral,wheat,lightgreen);
+            grid-area: f5;
+        }
+        .sub-6{
+            background-image: linear-gradient(to top left,pink,wheat,lightsteelblue);
+            grid-area: s6;
+        }
+        .sub-7{
+            background-image: linear-gradient(to top left,lightcoral,wheat,lightgreen);
+            grid-area: s7;
+        }
+        .sub-8{
+            background-image: linear-gradient(to top left,lightcoral,wheat,lightcyan);
+            grid-area: e8;
+        }
+        .sub-9{
+            background-image: linear-gradient(to top left,lightcoral,lightgray,lightsteelblue);
+            grid-area: n9;
+        }
+        .sub-10{
+            background-image: linear-gradient(to top left,lightsalmon,rgb(233, 155, 155),lightsteelblue);
+            grid-area: t10;
+        }
+        .sub-11{
+            background-image: linear-gradient(to top left,lightblue,lightcoral);
+            grid-area: e11;
+        }
+        .sub-12{
+            background-image: linear-gradient(to bottom right,lightcoral,lightgreen);
+            grid-area: t12;
+        }
+        .sub-13{
+            background-image: linear-gradient(to top left,lightgreen,wheat,lightsteelblue);
+            grid-area: t13;
+        }
+        .sub-14{
+            background-image: linear-gradient(to bottom right,lightcoral,rgb(158, 189, 231));
+            grid-area: f14;
+        }
+        @media screen and (max-width : 550px) {
+            .grid-container3{
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(14,1fr);
+                grid-template-areas: 
+                'o1'
+                't2'
+                't3'
+                'f4'
+                'f5'
+                's6'
+                's7'
+                'e8'
+                'n9'
+                't10'
+                'e11'
+                't12'
+                't13'
+                'f14';
+            }
+        }
+        @media screen and (min-width : 550px) and (max-width : 900px) {
+            .grid-container3{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-areas: 
+                'o1 t2'
+                't3 f4'
+                'f5 s6'
+                's7 e8'
+                'n9 t10'
+                'e11 t12'
+                't13 f14'
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Task-1</h1>
+    <div class="grid-container1">
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+        <div class="item item-5"></div>
+        <div class="item item-6"></div>
+        <div class="item item-7"></div>
+        <div class="item item-8"></div>
+    </div>
+    <h1>Task-2</h1>
+    <div class="grid-container2">
+        <div class="box box-1">Header</div>
+        <div class="box box-2">Sidebar</div>
+        <div class="box box-3">Content-1</div>
+        <div class="box box-4">Content-2</div>
+        <div class="box box-5">Content-3</div>
+        <div class="box box-6">Footer</div>
+    </div>
+    <h1>Task-3</h1>
+    <div class="grid-container3">
+        <div class="sub sub-1">1</div>
+        <div class="sub sub-2">2</div>
+        <div class="sub sub-3">3</div>
+        <div class="sub sub-4">4</div>
+        <div class="sub sub-5">5</div>
+        <div class="sub sub-6">6</div>
+        <div class="sub sub-7">7</div>
+        <div class="sub sub-8">8</div>
+        <div class="sub sub-9">9</div>
+        <div class="sub sub-10">10</div>
+        <div class="sub sub-11">11</div>
+        <div class="sub sub-12">12</div>
+        <div class="sub sub-13">13</div>
+        <div class="sub sub-14">14</div>
+    </div>
+</body>
+</html>
