@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* navigation bar */
+.nav-bar{
+    background-color: whitesmoke;
+    opacity: 0.75;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
+    z-index: 999;
+}
+.nav-bar a{
+    text-decoration: none;
+    color: rgb(44, 40, 40);
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+}
+.nav-bar:hover{
+    background-color: white;
+    opacity: 1;
+}
+.nav-bar a:hover{
+    background-color: #ccc;
+    transition:0.3s ease;
+}
+a:nth-last-child(1):hover{
+    background-color: black;
+    color: white;
+}
+body{
+    background-color: #ffdddd;
+}
+/* first image and text */
+.first-image{
+    width: 100%;
+    height: 700px;
+    background-position: center center;
+    object-fit: cover;
+}
+.first-image-container{
+    position: relative;
+    top: 0;
+}
+.image-text-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+    line-height: 2;
+    letter-spacing: 5px;
+}
+.image-text-container p{
+    font-size: 2rem;
+}
+.image-text-container p:nth-child(1){
+    font-size: 4rem;
+}
+/* second image container */
+.second-image-container{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+}
+.p-con{
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+    width: 900px;
+    font-family: "Raleway", serif;
+    font-size: 15px;
+    line-height: 2;
+    color: #000;
+    margin-top: 42px;
+    font-style: italic;
+}
+
+section{
+    margin: 80px;
+    font-size: 2rem;
+    color: rgb(105, 100, 100);
+    text-align: center;
+}
+.second-image-container>img{
+    border-radius: 5px;
+}
+.wedding{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.wedding p{
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 80px;
+    font-size: 1.8rem;
+    text-align: center;
+    overflow: hidden;
+}
+.wedding p:hover{
+    background-color: #b8b4b4;
+    cursor: pointer;
+    color: #000;
+    transition: 0.2s ease;
+}
+.third-image-container{
+    position: relative;
+}
+.image-con{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    opacity: 0.85;
+}
+.invitation-text span:first-child{
+    font-size: 64px;
+    text-align: center;
+    color: white;
+    text-align: center;
+}
+.invitation-text span:last-child{
+    font-size: 38px;
+    text-align: center;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 90px;
+}
+.invitation-text{
+    line-height: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.last{
+    margin: 80px;
+    font-size: 2rem;
+    color: rgb(105, 100, 100);
+    display: flex;
+    justify-content: center;
+}
+
+.last-image-container{
+    display: flex;
+    justify-content: center;
+}
+.last-image-container img{
+    border-radius: 7px;
+}
+.sub-con{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 70px;
+    text-align: center;
+    line-height: 2;
+}
+.sub-con span{
+    font-size: 30px;
+}
+.sub-con p{
+    font-size: 20px;
+}
+.last-con{
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 2px;
+    margin-top: 100px;
+    background-color: rgb(242, 197, 237);
+    padding: 40px;
+}
+.last-con span:first-child{
+    font-size: 35px;
+}
+.last-con span:nth-child(2){
+    font-size: 20px;
+}
+.rsvp-con{
+    display: flex;
+    justify-content: center;
+}
+.rsvp-con span{
+    background-color: lightcoral;
+    color: white;
+    width: fit-content;
+    font-size: 25px;
+    margin: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-radius: 8px;
+}
+.rsvp-con span:hover{
+    background-color: gray;
+    color: #000;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.powered-con{
+    background-color: black;
+    width: 100%;
+    height: 130px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.powered-con a,.powered-con p{
+    color: white;
+    font-size: 14px;
+}
+/* mobile approach */
+/* nav bar */
+@media screen and (max-width : 550px) {
+    .nav-bar{
+        display: none;
+    }  
+    section{
+        margin: 40px;
+    }
+    .first-image{
+        height: 80%;
+        position: relative;
+        object-fit: cover;
+    }
+    .image-text-container p:nth-child(1){
+        font-size: 30px;
+    }
+    .image-text-container p{
+        font-size: 18px;
+        line-height: 2;
+    }
+    .second-image-container img{
+        width: 80%;
+    }
+    .second-image-container p{
+        width: 45%;
+        font-size: small;
+    }
+    .invitation-text span:first-child{
+        font-size: 35px;
+    }
+    .invitation-text span:last-child{
+        font-size: 25px;
+    }
+    .last-image-container img{
+        width: 80%;
+    }
+    .last-con span:first-child{
+        font-size: 30px;
+    }
+    .when p{
+        font-size: 12px;
+    }
+    .where p{
+        font-size: 12px;
+    }
+    .third-image-container img{
+        height: 60%;
+    }
+}
+/* tab approach */
+@media screen and (min-width : 900px) and (max-width : 1020px) {
+    .first-image{
+        height: 500px;
+        position: relative;
+        object-fit: cover;
+    }
+    .image-text-container p:nth-child(1){
+        font-size: 30px;
+    }
+    .image-text-container p{
+        font-size: 18px;
+        line-height: 2;
+    }
+    .second-image-container img,.second-image-container p{
+        width: 80%;
+    }
+    .invitation-text span:first-child{
+        font-size: 55px;
+    }
+    .invitation-text span:last-child{
+        font-size: 35px;
+    }
+    .last-image-container img{
+        width: 80%;
+    }
+    .last-con span:first-child{
+        font-size: 40px;
+    }
+    .third-image-container img{
+        height: 60%;
+    }
+}
