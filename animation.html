@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+            box-sizing: border-box;
+        }
+        .dot_container div{
+            width: 10px;
+            height: 10px;
+            background-color: black;
+            border-radius: 50%;
+            animation-name: dots_wave;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+        .dot_container div:nth-child(1){
+            background-color:red;
+            animation-delay: .1s;
+        }
+        .dot_container div:nth-child(2){
+            background-color: blue;
+            animation-delay: .5s;
+        }
+        .dot_container div:nth-child(3){
+            background-color:aqua;
+            animation-delay: 1s;
+        }
+        .dot_container div:nth-child(4){
+            background-color: green;
+            animation-delay: 1.5s;
+        }
+        
+        .dot_container{
+            /* border: 2px solid; */
+            padding: 50px;
+            display: grid;
+            place-content: center;
+            grid-template-columns: repeat(4,15px);
+            
+        }
+        @keyframes dots_wave{
+            0%{
+                transform: translateY(1px);
+            }
+            25%{
+                transform: translateY(-5px);
+            }
+           
+
+            100%{ 
+                transform: translateY(1px);
+            }
+
+                
+        }
+        .music_container{
+            margin-top : 50px;
+            /* border: 2px solid; */
+            display: grid;
+            height: 300px;
+            grid-template-columns: repeat(6,35px);
+            place-content:start center;
+            transform: rotateX(180deg);
+
+
+        }
+        .music_container div{
+            width: 25px;
+            height: 150px;
+            background-color:blue;
+            border-radius: 5px;
+            animation-name: music_bar;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+
+            
+        }
+        .music_container div:nth-child(1){
+            animation-delay: .2s;
+        }
+        .music_container div:nth-child(2){
+            animation-delay: .4s;
+        }
+        .music_container div:nth-child(3){
+            animation-delay: .6s;
+        }
+        .music_container div:nth-child(4){
+            animation-delay: .8s;
+        }
+        .music_container div:nth-child(5){
+            animation-delay: 1s;
+        }
+        .music_container div:nth-child(6){
+            animation-delay: 1.2s;
+        }
+        @keyframes music_bar{
+            0%,75%{
+                
+                height: 150px ;
+                background-color: purple;
+            }
+            50%{
+                height: 75px;
+                background-color:rgb(233, 28, 229) ;
+
+            }
+            25%, 100%{
+                height: 20px;
+                background-color:red;
+            }
+
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <h3><center>Task-1</h3></center>
+    <div class="dot_container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+     <h3><center>Task-2</center></h3>
+    <div class="music_container">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    
+    </div>
+</body>
+</html>
